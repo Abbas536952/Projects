@@ -31,6 +31,11 @@ namespace WebAPI.Controllers
             foreach(var band in bandsCollectionMapped)
             {
                 _bandAlbumRepository.AddBand(band);
+                _bandAlbumRepository.SaveChanges();
+                foreach(var album in band.Albums)
+                {
+                    _bandAlbumRepository.AddAlbum(band.ID, album);
+                }
             }
             _bandAlbumRepository.SaveChanges();
             return Ok();

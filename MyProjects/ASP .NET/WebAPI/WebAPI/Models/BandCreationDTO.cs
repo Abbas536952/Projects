@@ -7,8 +7,8 @@ using WebAPI.ValidationAttributes;
 
 namespace WebAPI.Models
 {
-    [NameAndGenreAttributes]
-    public class BandCreationDTO
+    //[NameAndGenreAttributes]
+    public class BandCreationDTO : IValidatableObject
     {
         //public int ID { get; set; } Key will be assigned by database itself.
         
@@ -20,5 +20,14 @@ namespace WebAPI.Models
         
         //Adding this so that user can provide albums aswell when creating a band.
         public ICollection<AlbumCreationDTO> Albums { get; set; } = new List<AlbumCreationDTO>();
+
+        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
+        {
+            if(Name == Genre)
+            {
+                yield return new ValidationResult("Name and Genre cannot be the same.",
+                    new[] { "BandCreationDTO" });
+            }
+        }
     }
 }

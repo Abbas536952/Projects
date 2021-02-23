@@ -98,6 +98,7 @@ namespace WebAPI.Controllers
             //No need to null check as bad req. will be thrown by API automatically if null.
             var bandEntityMapped = _mapper.Map<Band>(bandCreationDTO);
             _bandAlbumRepository.AddBand(bandEntityMapped);
+            _bandAlbumRepository.SaveChanges(); //Will fix Foreign Key Conflict Error.
 
             //Adding this functionality on my own because the instructor doesn't mention how to add
             //albums as well into the database. Not including this code will only save the band and not albums in dbset.
