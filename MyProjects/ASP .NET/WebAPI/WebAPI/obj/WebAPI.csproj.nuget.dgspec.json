@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\WebAPI\\WebAPI\\WebAPI\\WebAPI.csproj": {}
+    "D:\\ASP .NET\\WebAPI\\WebAPI\\WebAPI.csproj": {}
   },
   "projects": {
-    "D:\\WebAPI\\WebAPI\\WebAPI\\WebAPI.csproj": {
+    "D:\\ASP .NET\\WebAPI\\WebAPI\\WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\WebAPI\\WebAPI\\WebAPI\\WebAPI.csproj",
+        "projectUniqueName": "D:\\ASP .NET\\WebAPI\\WebAPI\\WebAPI.csproj",
         "projectName": "WebAPI",
-        "projectPath": "D:\\WebAPI\\WebAPI\\WebAPI\\WebAPI.csproj",
+        "projectPath": "D:\\ASP .NET\\WebAPI\\WebAPI\\WebAPI.csproj",
         "packagesPath": "C:\\Users\\Abbas\\.nuget\\packages\\",
-        "outputPath": "D:\\WebAPI\\WebAPI\\WebAPI\\obj\\",
+        "outputPath": "D:\\ASP .NET\\WebAPI\\WebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Abbas\\AppData\\Roaming\\NuGet\\NuGet.Config",

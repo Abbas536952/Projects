@@ -39,3 +39,44 @@ D:\WebAPI\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\
 D:\WebAPI\WebAPI\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.csproj.CopyComplete
 D:\WebAPI\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\AutoMapper.dll
 D:\WebAPI\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\ASP .NET\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\ASP .NET\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\appsettings.json
+D:\ASP .NET\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\WebAPI.exe
+D:\ASP .NET\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\WebAPI.deps.json
+D:\ASP .NET\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\WebAPI.runtimeconfig.json
+D:\ASP .NET\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\WebAPI.runtimeconfig.dev.json
+D:\ASP .NET\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\WebAPI.dll
+D:\ASP .NET\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\WebAPI.pdb
+D:\ASP .NET\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\AutoMapper.dll
+D:\ASP .NET\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\ASP .NET\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\ASP .NET\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+D:\ASP .NET\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\ASP .NET\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+D:\ASP .NET\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+D:\ASP .NET\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\ASP .NET\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+D:\ASP .NET\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+D:\ASP .NET\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+D:\ASP .NET\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+D:\ASP .NET\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+D:\ASP .NET\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+D:\ASP .NET\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+D:\ASP .NET\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+D:\ASP .NET\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+D:\ASP .NET\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
+D:\ASP .NET\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
+D:\ASP .NET\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\ASP .NET\WebAPI\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.csprojAssemblyReference.cache
+D:\ASP .NET\WebAPI\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.AssemblyInfoInputs.cache
+D:\ASP .NET\WebAPI\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.AssemblyInfo.cs
+D:\ASP .NET\WebAPI\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.csproj.CoreCompileInputs.cache
+D:\ASP .NET\WebAPI\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.MvcApplicationPartsAssemblyInfo.cache
+D:\ASP .NET\WebAPI\WebAPI\obj\Debug\netcoreapp3.1\staticwebassets\WebAPI.StaticWebAssets.Manifest.cache
+D:\ASP .NET\WebAPI\WebAPI\obj\Debug\netcoreapp3.1\staticwebassets\WebAPI.StaticWebAssets.xml
+D:\ASP .NET\WebAPI\WebAPI\obj\Debug\netcoreapp3.1\scopedcss\bundle\WebAPI.styles.css
+D:\ASP .NET\WebAPI\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.RazorTargetAssemblyInfo.cache
+D:\ASP .NET\WebAPI\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.csproj.CopyComplete
+D:\ASP .NET\WebAPI\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.dll
+D:\ASP .NET\WebAPI\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.pdb
+D:\ASP .NET\WebAPI\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.genruntimeconfig.cache
