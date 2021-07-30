@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -20,39 +21,38 @@ namespace WebAPI.Repositories
             _db = db ?? throw new ArgumentNullException(nameof(db));
         }
 
-        public void AddAlbum(int bandID, Album album)
+        public async Task AddAlbumAsync(int bandID, Album album)
         {
            album.BandID = bandID;
-           _db.Albums.Add(album);
+           await _db.Albums.AddAsync(album);
         }
 
-        public void AddBand(Band band)
+        public async Task AddBandAsync(Band band)
         {
-            _db.Bands.Add(band); //Here Bands refers to our dbSet we created in BandAlbumContext.
-         
+            await _db.Bands.AddAsync(band); //Here Bands refers to our dbSet we created in BandAlbumContext.
         }
 
-        public Album GetAlbumForABand(int bandID, int albumID)
+        public async Task<Album> GetAlbumForABandAsync(int bandID, int albumID)
         {
-            return _db.Albums.Where(c => c.BandID == bandID && c.AlbumID == albumID).FirstOrDefault();
+            return await _db.Albums.Where(c => c.BandID == bandID && c.AlbumID == albumID).FirstOrDefaultAsync();
         }
 
-        public List<Album> GetAlbumsForABand(int bandID)
+        public async Task<List<Album>> GetAlbumsForABandAsync(int bandID)
         {
-            return _db.Albums.Where(c => c.BandID == bandID).ToList();
+            return await _db.Albums.Where(c => c.BandID == bandID).ToListAsync();
         }
 
-        public List<Album> GetAllAlbums()
+        public async Task<List<Album>> GetAllAlbumsAsync()
         {
-            return _db.Albums.ToList();
+            return await _db.Albums.ToListAsync();
         }
 
-        public List<Band> GetAllBands()
+        public async Task<List<Band>> GetAllBandsAsync()
         {
-            return _db.Bands.ToList();
+            return await _db.Bands.ToListAsync();
         }
 
-        public List<Band> GetAllBands(//string Genre, string Search
+        public async Task<List<Band>> GetAllBandsAsync(//string Genre, string Search
             BandsResourceParameters bandsResourceParameters)
         {
             if(bandsResourceParameters == null)
@@ -63,7 +63,7 @@ namespace WebAPI.Repositories
             if (string.IsNullOrWhiteSpace(bandsResourceParameters.Genre) && 
                 string.IsNullOrWhiteSpace(bandsResourceParameters.Search))
             {
-                GetAllBands();
+                await GetAllBandsAsync();
             }
 
             //Saving all bands in this var so changes can be done in this var and not whole database set.
@@ -85,61 +85,71 @@ namespace WebAPI.Repositories
                 collectionOfAllBands = collectionOfAllBands.Where(
                     c => c.Name.Contains(Search1));
             }
-            return collectionOfAllBands.ToList();
+            return await collectionOfAllBands.ToListAsync();
         }
 
-        public Band GetBand(int bandID)
+        public async Task<Band> GetBandAsync(int bandID)
         {
-            return _db.Bands.Where(c => c.ID == bandID).FirstOrDefault();
+            return await _db.Bands.Where(c => c.ID == bandID).FirstOrDefaultAsync();
             //If above statement shows error, simply add .FirstOrDefault() to fix.
         }
 
-        public List<Band> GetSpecificBands(List<int> bandIDs)
+        public async Task<List<Band>> GetSpecificBandsAsync(List<int> bandIDs)
         {
-            return _db.Bands.Where(c => bandIDs.Contains(c.ID)).ToList();
+            return await  _db.Bands.Where(c => bandIDs.Contains(c.ID)).ToListAsync();
         }
 
-        public void RemoveAlbum(Album album)
+        public async Task RemoveAlbumAsync(Album album)
         {
             _db.Albums.Remove(album);
         }
 
-        public void RemoveBand(Band band)
+        public async Task RemoveBandAsync(Band band)
         {
             _db.Bands.Remove(band);
         }
 
-        public bool SaveChanges()
+        public async Task<bool> SaveChangesAsync()
         {
             //SaveChanges() returns the number of records that were saved.
             //If it returns 0, it means 0 records were saved, which means the save was successful but
             //there were no records to save. -1 shows that the saving was unsuccessful.
 
-            if(_db.SaveChanges() < 0)
+            if(await _db.SaveChangesAsync() < 0)
             {
                 return false;
             }
             return true;
         }
 
-        public void UpdateAlbum(Album album) //Will be implemented in Controllers directly.
+        public async Task UpdateAlbumAsync(Album album) //Will be implemented in Controllers directly.
         {
             throw new NotImplementedException();
         }
 
-        public void UpdateBand(Band band)
+        public async Task UpdateBandAsync(Band band)
         {
             throw new NotImplementedException();
         }
 
-        public bool BandExists(int bandID)
+        public async Task<bool> BandExistsAsync(int bandID)
         {
-            return _db.Bands.Any(c => c.ID == bandID); //Simply returns true or false.
+            return await _db.Bands.AnyAsync(c => c.ID == bandID); //Simply returns true or false.
         }
 
-        public bool AlbumExists(int albumID)
+        public async Task<bool> BandExistsAsync(string name)
         {
-            return _db.Albums.Any(c => c.AlbumID == albumID); //Simply returns true or false.
+            return await _db.Bands.AnyAsync(c => c.Name == name);
+        }
+
+        public async Task<bool> AlbumExistsAsync(int albumID)
+        {
+            return await _db.Albums.AnyAsync(c => c.AlbumID == albumID); //Simply returns true or false.
+        }
+
+        public async Task<bool> AlbumExistsAsync(string title)
+        {
+            return await _db.Albums.AnyAsync(c => c.Title == title);
         }
     }
 }

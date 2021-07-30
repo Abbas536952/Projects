@@ -10,9 +10,9 @@ namespace WebAPI.Models
     //[TestAndDescriptionAttributes]
     public class AlbumCreationDTO : IValidatableObject
     {
-        //public int AlbumID { get; set; } Will be assigned automatically.
         [Required(ErrorMessage = "Values cannot be null")] //Adding for validation otherwise not necessary.
         //ErrorMessage attribute can be added to any data annotation to display custom error message.
+        public int BandID { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
 
@@ -28,8 +28,5 @@ namespace WebAPI.Models
                     new[] { "AlbumCreationDTO" });
             }
         }
-
-        //public Band Band { get; set; }
-        //public int BandID { get; set; } Not required because bandID will be passed as argument while creation.
     }
 }

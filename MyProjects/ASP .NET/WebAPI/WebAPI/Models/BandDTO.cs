@@ -9,7 +9,7 @@ namespace WebAPI.Models
     {
         //No need of attributes like [Key] here.
         //Only add properties you want to display in output.
-        public int ID { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
         public string Genre { get; set; }
         public string FoundedYearsAgo { get; set; }
