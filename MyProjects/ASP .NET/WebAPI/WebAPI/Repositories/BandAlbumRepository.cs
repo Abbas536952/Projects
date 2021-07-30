@@ -49,7 +49,7 @@ namespace WebAPI.Repositories
 
         public async Task<List<Band>> GetAllBandsAsync()
         {
-            return await _db.Bands.ToListAsync();
+            return await _db.Bands.Include(x => x.Albums).ToListAsync();
         }
 
         public async Task<List<Band>> GetAllBandsAsync(//string Genre, string Search
@@ -90,13 +90,12 @@ namespace WebAPI.Repositories
 
         public async Task<Band> GetBandAsync(int bandID)
         {
-            return await _db.Bands.Where(c => c.ID == bandID).FirstOrDefaultAsync();
-            //If above statement shows error, simply add .FirstOrDefault() to fix.
+            return await _db.Bands.Where(c => c.ID == bandID).Include(x => x.Albums).FirstOrDefaultAsync();
         }
 
         public async Task<List<Band>> GetSpecificBandsAsync(List<int> bandIDs)
         {
-            return await  _db.Bands.Where(c => bandIDs.Contains(c.ID)).ToListAsync();
+            return await  _db.Bands.Where(c => bandIDs.Contains(c.ID)).Include(x => x.Albums).ToListAsync();
         }
 
         public async Task RemoveAlbumAsync(Album album)

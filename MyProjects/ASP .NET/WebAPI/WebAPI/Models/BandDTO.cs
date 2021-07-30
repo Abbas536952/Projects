@@ -13,5 +13,6 @@ namespace WebAPI.Models
         public string Name { get; set; }
         public string Genre { get; set; }
         public string FoundedYearsAgo { get; set; }
+        public List<AlbumDTO> Albums = new List<AlbumDTO>();
     }
 }

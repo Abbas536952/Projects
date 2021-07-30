@@ -17,6 +17,6 @@ namespace WebAPI.Entities
         public DateTime Founded { get; set; }
 
 
-        public ICollection<Album> Albums = new List<Album>(); //Initializing here to avoid Null Exception.
+        public List<Album> Albums = new List<Album>(); //Initializing here to avoid Null Exception.
     }
 }

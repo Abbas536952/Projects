@@ -18,10 +18,10 @@ namespace WebAPI.Profiles
                     dest => dest.FoundedYearsAgo,
                     opt => opt.MapFrom(src => "Year " + src.Founded.ToString("yyyy") +
                                       " (" + (currentDate.Year - src.Founded.Year).ToString() + " Years Ago)")
-                    ); //ForMember is needed for variables with custom/modified information.
+                    ).ReverseMap(); //ForMember is needed for variables with custom/modified information.
 
             CreateMap<BandCreationDTO, Band>();
-            //CreateMap<IEnumerable<BandCreationDTO>, IEnumerable<Band>>();
+            //CreateMap<List<BandDTO>, Band>().ReverseMap();
         }
     }
 }
