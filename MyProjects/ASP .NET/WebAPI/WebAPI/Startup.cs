@@ -13,7 +13,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebAPI.DbContexts;
-using WebAPI.Services;
+using WebAPI.Repositories;
+using WebAPI.Repositories.Interfaces;
 
 namespace WebAPI
 {

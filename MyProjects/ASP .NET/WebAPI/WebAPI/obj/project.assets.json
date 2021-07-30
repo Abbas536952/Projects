@@ -4994,19 +4994,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Abbas\\.nuget\\packages\\": {}
+    "C:\\Users\\Abbas Shabbir\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ASP .NET\\WebAPI\\WebAPI\\WebAPI.csproj",
+      "projectUniqueName": "C:\\Projects\\Projects\\MyProjects\\ASP .NET\\WebAPI\\WebAPI\\WebAPI.csproj",
       "projectName": "WebAPI",
-      "projectPath": "D:\\ASP .NET\\WebAPI\\WebAPI\\WebAPI.csproj",
-      "packagesPath": "C:\\Users\\Abbas\\.nuget\\packages\\",
-      "outputPath": "D:\\ASP .NET\\WebAPI\\WebAPI\\obj\\",
+      "projectPath": "C:\\Projects\\Projects\\MyProjects\\ASP .NET\\WebAPI\\WebAPI\\WebAPI.csproj",
+      "packagesPath": "C:\\Users\\Abbas Shabbir\\.nuget\\packages\\",
+      "outputPath": "C:\\Projects\\Projects\\MyProjects\\ASP .NET\\WebAPI\\WebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Abbas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Abbas Shabbir\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5069,7 +5069,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

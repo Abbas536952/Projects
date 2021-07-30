@@ -5,8 +5,9 @@ using System.Threading.Tasks;
 using WebAPI.DbContexts;
 using WebAPI.Entities;
 using WebAPI.Helpers;
+using WebAPI.Repositories.Interfaces;
 
-namespace WebAPI.Services
+namespace WebAPI.Repositories
 {
     public class BandAlbumRepository : IBandAlbumRepository
     {
@@ -21,56 +22,37 @@ namespace WebAPI.Services
 
         public void AddAlbum(int bandID, Album album)
         {
-           //if(bandID == 0)
-           //{
-                //throw new ArgumentNullException(nameof(bandID));
-           //}
-
-           if(album == null)
-           {
-                throw new ArgumentNullException(nameof(album));
-           }
-
            album.BandID = bandID;
            _db.Albums.Add(album);
         }
 
         public void AddBand(Band band)
         {
-            if(band == null)
-            {
-                throw new ArgumentNullException(nameof(band));
-            }
-
             _db.Bands.Add(band); //Here Bands refers to our dbSet we created in BandAlbumContext.
          
         }
 
         public Album GetAlbumForABand(int bandID, int albumID)
         {
-            
             return _db.Albums.Where(c => c.BandID == bandID && c.AlbumID == albumID).FirstOrDefault();
-            //FirstOrDefault() means grab the first result where values match.
-
         }
 
-        public IEnumerable<Album> GetAlbumsForABand(int bandID)
+        public List<Album> GetAlbumsForABand(int bandID)
         {
-
             return _db.Albums.Where(c => c.BandID == bandID).ToList();
         }
 
-        public IEnumerable<Album> GetAllAlbums()
+        public List<Album> GetAllAlbums()
         {
             return _db.Albums.ToList();
         }
 
-        public IEnumerable<Band> GetAllBands()
+        public List<Band> GetAllBands()
         {
             return _db.Bands.ToList();
         }
 
-        public IEnumerable<Band> GetAllBands(//string Genre, string Search
+        public List<Band> GetAllBands(//string Genre, string Search
             BandsResourceParameters bandsResourceParameters)
         {
             if(bandsResourceParameters == null)
@@ -108,37 +90,22 @@ namespace WebAPI.Services
 
         public Band GetBand(int bandID)
         {
-            
             return _db.Bands.Where(c => c.ID == bandID).FirstOrDefault();
             //If above statement shows error, simply add .FirstOrDefault() to fix.
         }
 
-        public IEnumerable<Band> GetSpecificBands(IEnumerable<int> bandIDs)
+        public List<Band> GetSpecificBands(List<int> bandIDs)
         {
-            if(bandIDs == null)
-            {
-                throw new ArgumentNullException(nameof(bandIDs));
-            }
-
             return _db.Bands.Where(c => bandIDs.Contains(c.ID)).ToList();
-            //return _db.Bands.Where(c => bandIDs.Contains(c.ID)).OrderBy(c => c.Name).ToList(); Optional but useful when ordering result with name of bands.
         }
 
         public void RemoveAlbum(Album album)
         {
-            if(album == null)
-            {
-                throw new ArgumentNullException(nameof(album));
-            }
             _db.Albums.Remove(album);
         }
 
         public void RemoveBand(Band band)
         {
-            if (band == null)
-            {
-                throw new ArgumentNullException(nameof(band));
-            }
             _db.Bands.Remove(band);
         }
 

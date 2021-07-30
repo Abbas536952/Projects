@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using WebAPI.Entities;
 using WebAPI.Helpers;
 using WebAPI.Models;
-using WebAPI.Services;
+using WebAPI.Repositories.Interfaces;
 
 namespace WebAPI.Controllers
 {
